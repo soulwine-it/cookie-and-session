@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script tyep="text/javascript">
+	function setPopUpStart(obj){
+		if(obj.checked==true){
+			var expireDate = new Date();
+			expireDate.setMonth(expireDate.getMonth() + 1); <!--쿠키 유효 시간을 한달로 설정합니다.-->
+			
+			<!--오늘 더이상 팝업창 띄우지 않기에 체크하면 not ShowPop 쿠키값을 true로 설정하여 재접속시 팝업창을 나타내지 않습니다.--> 
+			document.cookie = "notShowPop=" + "true" + ";path=/; expires=" + expireDate.toGMTString(); 
+			window.close();
+		}
+	}
+
+</script>
+</head>
+<body>
+	알림 팝업창입니다.
+	<br><br><br><br><br><br><br>
+	<form>
+		<input type=checkbox onClick="setPopUpStart(this)"> 오늘 더이상 팝업창 띄우지 않기
+	</form>
+</body>
+</html>
