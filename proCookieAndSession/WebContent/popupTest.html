@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>자바스크립트에서 쿠키 사용</title>
 <script type="text/javascript">
-	<!--window.onload = pageLoad; <!--브라우저에 웹 페이지가 로드될 때 pageLoad()함수를 호출하여 실행합니다. -->
+	window.onload = pageLoad; <!--브라우저에 웹 페이지가 로드될 때 pageLoad()함수를 호출하여 실행합니다. -->
 	function pageLoad(){
 		notShowPop = getCookieValue(); <!-- notShowPop의 쿠키 값을 getCookieValue()를 호출하여 얻습니다. -->
 		if(notShowPop !="true"){
